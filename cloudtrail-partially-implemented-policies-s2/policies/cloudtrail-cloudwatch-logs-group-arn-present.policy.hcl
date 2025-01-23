@@ -3,6 +3,8 @@ sentinel {
   enforcement_level = advisory
 }
 
+resource_policy "aws_cloudwatch_log_group" {}
+
 resource_policy "aws_cloudtrail" "cloudtrail_resources" {
   locals {
     cloudwatch_logs_groups_arn = try(
